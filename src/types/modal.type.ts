@@ -5,3 +5,8 @@ export type ModalType = {
   onClose: () => void;
   children: ReactNode;
 };
+
+export type ModalContextType = {
+  openModal: (content?: ReactNode) => void;
+  closeModal: () => void;
+};
