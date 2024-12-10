@@ -16,7 +16,11 @@ export const ToastProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const createToast = useCallback(
     (severity: SeverityType, title: string, detail: string = "") => {
       if (toastRef.current) {
-        toastRef.current.show({ severity, summary: title, detail });
+        toastRef.current.show({
+          severity,
+          summary: title,
+          detail,
+        });
       }
     },
     [],
