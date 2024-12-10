@@ -1,10 +1,15 @@
-import { createContext, FC, ReactNode, useCallback, useState } from "react";
+import {
+  createContext,
+  FC,
+  ReactNode,
+  useCallback,
+  useContext,
+  useState,
+} from "react";
 import { ModalContextType } from "../types/modal.type";
 import Modal from "../components/common/Modal";
 
-export const ModalContext = createContext<ModalContextType | undefined>(
-  undefined,
-);
+const ModalContext = createContext<ModalContextType | undefined>(undefined);
 
 export const ModalProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,4 +38,14 @@ export const ModalProvider: FC<{ children: ReactNode }> = ({ children }) => {
       </Modal>
     </ModalContext.Provider>
   );
+};
+
+export const useModal = (): ModalContextType => {
+  const context = useContext(ModalContext);
+
+  if (context === undefined) {
+    throw new Error("useModal must be used within a ModalProvider");
+  }
+
+  return context;
 };
