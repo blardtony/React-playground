@@ -4,14 +4,17 @@ import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import { browserRouter } from "./components/router/BrowserRouter.tsx";
 import { ModalProvider } from "./contexts/ModalContext.tsx";
+import { ToastProvider } from "./contexts/ToastContext.tsx";
 
 const rootElement = document.getElementById("root");
 if (rootElement) {
   createRoot(rootElement).render(
     <StrictMode>
-      <ModalProvider>
-        <RouterProvider router={browserRouter} />
-      </ModalProvider>
+      <ToastProvider>
+        <ModalProvider>
+          <RouterProvider router={browserRouter} />
+        </ModalProvider>
+      </ToastProvider>
     </StrictMode>,
   );
 } else {
