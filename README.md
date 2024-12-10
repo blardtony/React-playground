@@ -7,7 +7,7 @@
 - React 18 with TypeScript
 - Vite for fast development and building
 - Biomejs for code linting and formatting
-- Tailwind CSS with DaisyUI for styling
+- Tailwind CSS with DaisyUI and Primereact for styling
 - React Router for navigation
 
 ### Scripts
