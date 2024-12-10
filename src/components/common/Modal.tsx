@@ -49,6 +49,7 @@ const Modal: FC<ModalType> = ({ visible, onClose, children }) => {
           <button
             type="submit"
             className="btn btn-circle btn-ghost btn-sm absolute right-2 top-2"
+            aria-label="Close modal"
           >
             ✕
           </button>
