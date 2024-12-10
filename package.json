@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
+    "format": "clear && npx @biomejs/biome format src --write",
+    "lint": "clear && npx @biomejs/biome lint src --write"
   },
   "dependencies": {
     "react": "^18.3.1",

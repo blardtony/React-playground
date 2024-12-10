@@ -6,8 +6,7 @@
 
 - React 18 with TypeScript
 - Vite for fast development and building
-- ESLint for code linting
-- Prettier for code formatting
+- Biomejs for code linting and formatting
 - Tailwind CSS with DaisyUI for styling
 - React Router for navigation
 
@@ -15,9 +14,9 @@
 
 - `npm run dev`: Start the Vite development server
 - `npm run build`: Compile TypeScript and build for production
-- `npm run lint`: Run ESLint for code linting
+- `npm run lint`: Run Biomejs for code linting
 - `npm run preview`: Preview the production build
-- `npm run format`: Format code using Prettier
+- `npm run format`: Format code using Biomejs
 
 ## Setup and Usage
 
