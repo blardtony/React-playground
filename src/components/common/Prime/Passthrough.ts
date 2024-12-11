@@ -48,27 +48,14 @@ export const Pt: PtType = {
       ),
     },
     transition: {
-      enterFromClass: classNames(
-        "opacity-0",
-        "translate-x-0",
-        "translate-y-2/4",
-        "translate-z-0",
-      ),
-      enterActiveClass: classNames(
-        "transition-transform",
-        "transition-opacity",
-        "duration-300",
-      ),
-      leaveFromClass: classNames("max-h-40"),
-      leaveActiveClass: classNames("transition-all", "duration-500", "ease-in"),
-      leaveToClass: classNames(
-        "max-h-0",
-        "opacity-0",
-        "mb-0",
-        "overflow-hidden",
-      ),
-      addEndListener: (node: HTMLElement, done: () => void) => {
-        node.addEventListener("transitionend", done, false);
+      timeout: { enter: 300, exit: 300 },
+      classNames: {
+        enter: "opacity-0 max-h-0 translate-x-0 translate-y-2/4 translate-z-0",
+        enterActive:
+          "!max-h-40 !opacity-90 !translate-y-0 transition-transform transition-opacity duration-300",
+        exit: "max-h-40 opacity-90",
+        exitActive:
+          "!max-h-0 !opacity-0 !mb-0 overflow-hidden transition-all duration-500 ease-in",
       },
     },
   },
