@@ -1,6 +1,7 @@
 import { type RouteObject, createBrowserRouter } from "react-router-dom";
 import Home from "../../pages/Home";
 import Layout from "../common/Layout/Layout";
+import MapPage from "../../pages/Map";
 
 const router: RouteObject[] = [
   {
@@ -10,6 +11,10 @@ const router: RouteObject[] = [
       {
         path: "",
         element: <Home />,
+      },
+      {
+        path: "map",
+        element: <MapPage />,
       },
     ],
   },
